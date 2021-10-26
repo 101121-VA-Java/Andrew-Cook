@@ -1,0 +1,116 @@
+Notes
+- Maven - Predefined project architecture
+	- Project management tool and build automation tool.
+		-Project management
+			-Handles our dependencies for us.
+				- refers to framework/libraries by other developers to be used in your project.
+					- based on:
+						- groupId
+						- artifactId
+						- version
+					- Leverages JUnit dependency for testing. 
+					- Maven allows for quick search for dependencies
+						https://mvnrepository.com/
+			- in the pom.xml file
+				- Project object model
+					- you can know what a developers development environment is by the .pom file. 
+					- helps ensure that everyone on the team is working with the same dependencies and versions. 
+				- Maven creates a folder to store dependencies. .m2 folder
+	- Build automation tool
+		- manages the lifecycle of your application.
+		- bundle your files into an artifact.
+		- goal of maven is to create an artifact to be deployed. 
+			- three build lifecycles
+				- clean    (mvn clean)
+					- remove/clean previous artifacts. (.jar/war)
+				- default
+					- test/package your application
+						- validate
+						- test -> compiled code is tested
+						- package -> packages all the compiled code into a war/jar file
+						- verify
+						- install
+						- deploy
+						
+				-Site 
+					- Documentation
+			
+		- Basic project structure
+			- src/main/java
+				- where your packages/classes go
+			- src/main/resources
+				- resources such as files to configure the frameworks/libraries
+			- src/test/java
+				- where test classes are 
+			- src/test/resoruces
+				- where resources like files related to testing go
+			-pom.xml
+				- project object model which (contains metadata about project, properties, dependencies, build details)
+
+
+Testing
+			- People often test with a bunch of SYSout.
+	- Concepts
+				- refers to the process of making sure an application is working correctly. 
+		- positive testing
+			- making sure that an application handles the correct input.
+		- negative testing
+			- making sure that an application handles the incorrect inputs. 
+		- regression testing
+			- use the test to ensure that new code/feature(s) doesn't break old/previously written code.
+	types of testing. Based on frequency of uses
+		- unit testing (this is the one we will talk about) (JUnit is a unit testing framework for Java)
+			- can design methods to be testable?
+			- at the bottom of the testing pyramid, therefore the most abundant type of testing. 
+				- JUnit framework for Java
+			- TDD Test Drive Development. 
+				- the process of writing tests to fail first to test the functionality of your application
+				way to approach
+					- write interfaces/empty methods to establish the functionality desired. 
+					- write your tests. 
+					- write code and implement your methods. 
+
+		- integration testing. Do methods work well apart and together.
+		- System testing. Do all the pieces work well together.
+		- User acceptance testing (UAT)
+		
+JUnit
+	- JUnit is a Java Unit Testing Framework
+		- JUnit 5
+	- Includes a lot of annotations and classes in order to write automated tests.
+	- leverages the "assert" methods to check for a particular condition to determine if a test passes. 
+		- a test passes when it catches what it was intended to catch. 
+		- acheive code coverage by testing all of your code. 
+
+	JUnit Annotations
+		- @BeforeEach
+		- @AfterEach
+		- @BeforeAll
+		- @AfterAll
+		- @Test
+		- @Ignore
+		- @Order
+
+			@BeforeEach
+			public void beforeEach() {
+				System.out.println("Running before each test");
+}
+			@AfterEach
+			public void afterEach() {
+
+
+
+write tests for the remainders of the test (@orders) to run tests in order.
+
+implement those tests.
+
+check for not dividing by zero. throw in exception. If statement. If second value is zero, throw in exception. 
+extend from runtime exceptions. Arithmetic exceptions
+must see that exception exists
+assertThrows method (in maven)
+
+checks if a number is prime. public boolean isPrime(int i)
+	return true;
+
+we are checking if the return value for  is 0 or true or (a certain value)
+

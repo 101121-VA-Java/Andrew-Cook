@@ -1,0 +1,95 @@
+# Questions
+## Java Basics
+1.	What is Java? / Explain some features of Java
+2.	What is JRE / JDK / JVM?
+3.	What is the difference between an object and a class?
+4.	What is the root class from which every class extends?
+5.	What are the primitive data types in Java?
+6.	Where are Strings stored?
+7.	Explain stack vs heap
+	1.	Are variable references stored on the stack or heap? What about the objects they refer to?
+8.	What are annotations?
+9.	Why are strings immutable in java? How would you make your own objects immutable?
+10.	What is the difference between String, StringBuilder, and StringBuffer?
+11.	What are the different variable scopes in Java?
+		- local variables
+		- instance variables
+		- class variables which are static
+12.	What are the access modifiers in Java? Explain them.
+13.	What are the non-access modifiers in Java?
+14.	What is the difference between static and final variables?
+15.	What are the default values for all data types in Java?
+16.	What makes a class immutable?
+17.	What data types are supported in switch statements?
+18.	How to pass multiple values with a single parameter into a method?
+19.	What methods are available in the Object class?
+20.	What is the difference between == and .equals()?
+21.	What is an enhanced for loop?
+22.	What are the 3 usages of “super” keyword?
+23.	What is the first line of any constructor?
+24.	How would you perform constructor chaining?
+25.	What happens if you don’t define a constructor for a class? Can you still instantiate it?
+
+## OOP   study the pillars
+1.	What are the 4 pillars of OOP? Explain each and give examples of you implement them in Java code
+		Encapsulation
+			- Wrapping data and methods into a single unit and using access modifiers to make the variables private.
+		Abstraction
+			- Abstraction is to hide a complex implementation behind a simple interface. 
+		Inheritance
+			- A child class adopting the states and behaviors of a parent class. 
+				- 'Super' keyword refers to parent class. 
+		Polymorphism
+			- the ability of methods and objects to change behaviors in different contexts.
+			- an example is method overiding
+				- method of a subclass has the same signature of parent class but different implementation.
+			- another example is method overloading
+				- multiple methods in a class with different number or type of parameters. 
+2.	What is the difference between an abstract class and an interface?
+		- abstract is a non access modifier which goes in front of a class name. 
+		- interface declares behaviors for classes to implement. 
+3.	Can abstract methods have concrete methods? Can concrete (non-abstract) classes have abstract methods?
+4.	Can static methods access instance variables? Can non-static methods access static variables?
+5.	What are the implicit modifiers for interface variables? methods?
+6.	What is the difference between method overloading and overriding? What are the rules for changing the method signature of overloaded methods?
+7.	What are covariant return types? What rules apply to return types for overridden methods?
+		- change the return type of a method.
+8.	When do you use extends or implements keywords?
+
+## Exceptions    STUDY EXCEPTIONS AGAIN
+		Which exceptions do we need to check for?
+			unchecked exceptions    	
+				exception handling
+					try catch
+					throws
+			checked exceptions - - these should be handled by the programmer
+				
+1.	What is the difference between final, .finalize(), and finally?
+		- final class cannot be inherited
+		- finally keyword is used to 
+2.	Explain throw vs throws vs Throwable
+		-throw
+3.	Do you need a catch block? Can you have more than 1? Is there an order to follow?
+4.	What is base class of all exceptions? What interface do they all implement?
+5.	List some checked and unchecked exceptions?
+6.	Multi-catch block - can you catch more than one exception in a single catch block?
+
+## JUnit    STUDY JUnit
+1.	What is JUnit?
+	- testing apraratus
+2.	What is TDD?
+		test driven development
+3.	What are the annotations in JUnit? Order of execution?
+	- @test
+	- @befre
+4.	Give an example of a test case
+5.	How would you prevent a test from being run without commenting it out?
+6. 	How would you test that a specific exception is thrown?
+
+## Maven
+1.	What is Maven?
+		- a build tool and a dependencies tool. 
+2.	What is the default Maven build lifecycle?
+3.	Where / when does Maven retrieve dependencies from? Where are they stored locally?
+4.	What is the POM and what is the pom.xml?
+5.	What defines Maven project coordinates?

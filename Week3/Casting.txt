@@ -1,0 +1,6 @@
+Casiting     (upcasting and downcasting)
+	- Converting a datatype to another (int to long) 
+		- implicit:  If the original datatype has a smaller size than the target datatype (int to long)         (AutomaticCasting)
+		- explicit:   if the original datatype has a larger size than the target datatype. 		     (ExplicitCasting)
+			int i = (int) [long];
+		Reference the revaturepro resource for more. 

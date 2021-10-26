@@ -1,0 +1,17 @@
+10/25
+Project 0
+
+Enum
+	- research what an enum is.
+	- using an enum to store a specific value. He used it to make a private role (employee/manager role)
+Auto-generate sourcecode
+	- lookup how to. 
+	- what order did he use?
+	- want to generate fields first
+
+
+	setting up models for 
+	- setting up contracts
+
+
+
