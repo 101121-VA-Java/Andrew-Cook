@@ -1,0 +1,15 @@
+Go line by line, and explain what's happening in each line.
+
+int score = 80; 				// The int 80 is assigned to the score variable. Initialized
+
+String result; 				// the string variable is declared.
+
+if (score == 80) { 				// If conditional statement checks whether score is equal to 80. 
+	result = "You passed!"; 		// If the above statement evaluates to true, You passed! is assigned to the result and the expression breaks to after the else statement. If not, skip to the next statement.
+} else if (score > 80) { 			// An else if statement checks whether score is greater than 80. 
+	result = "You did great!"; 		// If the above statement evaluates to true, You did great! is assigned to result and expression breaks to after the else statement. If not, skip to the next statement.
+} else { 					// The else statement is evaluated if no previous statements were met. The following code is read.
+	result = "You did not pass. Try again!"; 	// The result variable is assigned a string value of You did not pass. Try again!" 
+}
+
+System.out.println(result); 			// The system will print out the result variable. In our case, a score of 80 means the line will print You passed!

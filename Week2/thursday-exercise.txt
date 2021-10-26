@@ -1,0 +1,57 @@
+public static void main(String[] args) {					 // This is a main method which has the default parameter as String. It's also a public access modifier that is static which means that it belongs to a class rather than an instance. 
+	String[] foodTypes = getFoodTypes(); 				// A string array of foodTypes is initialized here. The string array is assigned to getFoodTypes.
+	String myType = foodTypes[2]; 				// A string called myType is assigned to the foodTypes array index 2. This is the dinner case.
+
+	String[] foodsOfMyType = getFoodsByType(myType); 		// A string array foodsOfMyType is declared and assigned the value of the parameter myType of the getFoodsByType method.
+	
+	for (String food : foodsOfMyType) { 				// A for loop is created here which will loop through the number of foods in foodsOfMyType and execute the dinner case.
+		System.out.println(food); 				// This command will print out the dinner array. 
+	}
+}
+
+public static String[] getFoodTypes() { 						// A static method is defined here. getFoodTypes with a string return type without parameters.
+
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack","tired"};	// The sting foodTypes is being initialized as a string array with the stated values.
+	return foodTypes; 							// The previous method is returning the array.
+}
+
+public static String[] getFoodsByType(String type) { 			// a public static getFoodsByType string array is defined here.
+	String[] foods = new String[3]; 				// Here is initialized a string array foods, with three elements. 
+
+	switch(type) { 						 // This is the start of the switch statement string type.
+	case "breakfast": 						 // The begining of the breakfast switch case. This case will execute if the breakfast string was selected in the above array.
+		foods[0] = "pancakes"; 				 // pancackes is the first element in the breakfast array.
+		foods[1] = "cereal"; 					 // cereal is the second element in the breakfast array.
+		foods[2] = "omelette"; 				 // omelette is the third element in the breakfast array.
+		break; 						 // This is the end of the breakfast switch case. 
+	case "lunch": 						 // The begining of the lunch switch case. This case will execute if the lunch string was selected in the above array.
+		foods[0] = "sandwich";				 // sandwich is the 1st element in the lunch array.
+		foods[1] = "salad";					 // salad is the second element in the lunch array.
+		foods[2] = "soup"; 					 // soup is the third element in the lunch array.
+		break; 						 // This is the end of the lunch switch case.
+	case "dinner":						 // The begining of the dinner switch case. This case will execute if the dinner string was selected in the above array. In our case it will. 
+		foods[0] = "curry";					 // curry is the first element in the dinner array.
+		foods[1] = "stir fry"; 					 // stir fry is the second element in the dinner array.
+		foods[2] = "burger"; 				 // burger is the third element in the dinner array. 
+		break; 						 // This is the end of the dinner switch case.		This will break the switch statement and thereby the code.
+	case "dessert": 						 // The beginning of the dessert switch case. This case will execute if the dessert string was selected in the above array. 
+		foods[0] = "cake"; 					 // cake is the first element of the foods dessert array.
+		foods[1] = "ice cream"; 				 // ice cream is the second element in the dessert array.
+		foods[2] = "candy"; 					 // candy is the third element in the dessert array. 
+		break; 						 // This is the end of the dessert switch case.
+	case "snack": 						 // The begining of the snack switch case. This case will execute if the snack string was selected in the above array.
+		foods[0] = "chips"; 					 // chips is the first element in the snack array.
+		foods[1] = "apple"; 					 // apple is the second element in the snack array.
+		foods[2] = "samosa";				 // samosa is the third element in the snack array. 
+		break; 						 // This is the end of the snack switch case.
+	case "tired": 						 // This is the beginning of the tired switch case. This case will execute if the tired string was selected in the above array.
+		foods[0] = "deep breaths";				// deep breaths is the first element in the tired array,
+		break; 						// This is the end of the deep breaths switch case.
+	case default;						// This is the break of the default switch case. This will break the case if nothing else did.
+		break;						// This default will execute if none of the cases did.
+}
+
+	return foods; 						// This return statement returns the foods string array. 
+}
+
+								// In this case, the dinner array was chosen because the second element in the foodTypes was chosen. This will print the dinner array line by line. 

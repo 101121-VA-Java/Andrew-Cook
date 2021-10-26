@@ -1,0 +1,25 @@
+public class Food {						// Declaring a publicly accessible class called Food. 
+	public String name;					// A string, name, data type is declared with a public access modifier. 
+	public String type;					// A string, type, data type is declared with a public access modifier.
+
+	public Food(String name, String type) {			// A constructor of the Food class is declared with two string arguments. The two string arguments are string and type. 
+		this.name = name;				// The argument 'name' is assigned to the string name part of the Food array argument. 
+		this.type = type;				// The argument 'type' is assigned to the string type part of the Food array argument. 
+	}
+
+	public void cook() {					// Another public constructor is declared 
+		if (!name.contains("cooked")) {		// If statement which states if name does not contain cooked, the next line executes.
+			name = "cooked " + name;		// The name is attached with cooked and assigned to the name variable. 
+		}
+	}
+}
+
+public class Main {						// The main class is declared.
+
+	public static void main(String[] args) {			// The main method is declared. Public access modifier for the main method with string argument. The program beings here 
+		Food myFood = new Food("potato", "vegetable");	// The main method is instantiated here. The potato and vegetable string is passed to the method and stores the myFood object in Food.
+		myFood.cook();				// The cook method evokes the myFood object and names the myFood "cooked potato".
+
+		System.out.println(myFood.name);		// The program will output the myFood.name which is cooked potato.
+	}
+}
