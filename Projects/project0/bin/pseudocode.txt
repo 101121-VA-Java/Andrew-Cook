@@ -1,0 +1,79 @@
+umbrella company java file
+
+User login (STEP ONE)
+
+User registration
+Swing component
+
+Models/Entities
+
+Customer 
+	- string name
+	- string username
+	- sting password
+employee
+	- string name
+	- string username
+	- sting password
+	- int id  (employee (ID)
+	- Employee manager
+	- String role
+
+tasks
+	- need task ID's (int id)
+	- string name
+	- LocalDate dueDate
+	- assigned employee
+	- string for status
+	- 
+
+Data/Repository layer
+	
+	-EmployeeDao (Data access object)
+		Different methods
+			- getAllEmployees
+			- getEmployeeById
+			- addEmployee
+			- editEmployee
+			- deleteEmployee
+	TaskDao
+		- getAllTasks
+		- getTaskById
+		- addTask
+		- editTask
+		- deleteTask
+
+Service Layer    (this layer has the business logic)
+	EmployeeService
+		- addEmployee
+			- setDefaultManager if needed
+		- findEmployeeByUsername
+		- findEmployees
+		- findEmployeeById
+		- editEmployee
+		- deleteEmployee
+		- findEmployeeByManager
+
+	TaskService
+		- addTask
+			-setDefaultDueDate if needed
+		- 
+	LoginService
+		- Login (help employees login)
+		- register
+ControllerLayer
+		- registerUser
+		- userLogin
+		- exit
+
+
+
+
+
+
+
+
+
+
+
+

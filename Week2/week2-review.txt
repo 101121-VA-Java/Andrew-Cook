@@ -48,6 +48,8 @@
 2.	What is the difference between an abstract class and an interface?
 		- abstract is a non access modifier which goes in front of a class name. 
 		- interface declares behaviors for classes to implement. 
+			- an interface acts as a contract for behaviors that a class can implement. Interfaces have implicit modifiers on methods and variables. 
+				- Interfaces modify methods to be public and abstract. 
 3.	Can abstract methods have concrete methods? Can concrete (non-abstract) classes have abstract methods?
 4.	Can static methods access instance variables? Can non-static methods access static variables?
 5.	What are the implicit modifiers for interface variables? methods?
@@ -92,4 +94,5 @@
 2.	What is the default Maven build lifecycle?
 3.	Where / when does Maven retrieve dependencies from? Where are they stored locally?
 4.	What is the POM and what is the pom.xml?
+	The POM file is the Project Object Model
 5.	What defines Maven project coordinates?

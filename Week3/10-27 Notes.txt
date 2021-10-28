@@ -1,0 +1,129 @@
+.gitignore
+	- starts with a period so it's a hidden file.
+	- If the file exists, it will not get deleted from the repository. 
+
+Data structures
+	- Refers to class/solutions to work with data. A collection to add data. 
+		- Dynamic lists
+		- Unique values only.
+		- Ordering
+
+
+Arrays are objects. They do not extend from collections. They do not implement collection and as such, do not have access to collection methods. 
+
+<collection>.add
+Collection Interface
+	- An interface that can be considered the 'super' interface or the parent interface. 
+		- While it extends iterable, Collection declares methods available in all collections. 
+	- Collections only work with objects. 
+		- needs to work with wrapper classes for primitives. 
+		- Extends iterable, which is what allows collections to be iterated over/use an iterator. 
+
+	Important interfaces
+	- iterable. guarantees the collection can be iterated over.
+	- list. an ordered collection.
+		- Index-based data structure that can hold duplicate values. 
+		- Concrete implementation. - Non-abstract class.
+	->	- ArrayList
+			- Dynamoically sized array that alaments can be added/removed from.
+			- They leverage indexes which make them mroe efficient for retrieval operations. 
+				- automatically adds 150% more memory when created.
+		- LinkedList
+			- Consists of a series of nodes which stores references to objects. 
+			- Insertion and deletion are very efficient because new nodes are created. 
+			- Doubly linked lists
+				- stores references in front of and behind node.
+
+	- Set. a collection does not contain duplicates.
+		- An interface that extends Collection, does not hold duplicate values. 
+		- Concrete implementations
+			- HashSet
+				- That cannot promise order (leverages hashcode)
+				- leverages a HashMap in the background. 
+			- TreeSet
+				- ordered 
+					- by default, follows natural ordering. 
+						- can specify custom order using comparator.comparable. 
+
+
+
+
+	- Queue. a Interface that operates on a FIFO basis.
+		- Is an interface.
+		- extends collection, generally it follows a FIFO order. 
+		- concrete implementations
+			- Priority Queues
+				- Ordered by priority
+			- Linked List
+				- implements both List and Queue
+		- method summary
+			- add, remove, 
+			- peek, poll
+				- Poll
+					- retrieves and removes the head of this queue or returns null if it is empty. 
+
+
+
+
+	- Map. contains key/value pairs. Does not exten iterable. 
+		- Interface. 
+		- does not extend collection
+		- Leverage a key/value pair system. 
+		- Because it doensn't extend collection, it cannot be iterated. 
+		- put (K key, V value)
+		- concrete implementations
+			- HashMap
+				- 
+				Hashcode
+					- Method that provides a hash value based on the fields of an object. Instead of storing everything in it's own box, it stores it 
+					- Objects that are equal, should return the same hashcode. 
+					- Objects that are not equal, may return the same hashcode. 
+						- A good hashcode implementation should try to produce distinct integers for unequal objects. 
+							- This value is stored internally to store data in a Map and to imporove access operation. 
+							
+
+
+			- TreeMap
+				-  A map that is ordered 
+
+The Collections Framework 
+	- A set of classes and interfaces that implement commonly used data structures. 
+	
+
+Collections Class
+	- Defines many static helper methods which operate on any given collection. This is helpful with sorting, searching, reversing, or performing other operations on collections. 
+	- NOT to be confused with the collection interface. 
+		
+
+
+Lists
+	List interface 
+		- Collection that is ordered and keeps the order of inserted elements. 
+		- Duplicate entries are allowed. 
+	- Vector.
+		- Dynamically allocated. Concurrency-locked. Doubles their size every time. Slower than arraylist.
+
+
+Comparable
+	- a functional interface
+		- compareTo method
+	- implement in the model class itself
+		- should return an integer that will be used to define an order.
+			- if integer is negative, is of lesser value
+			- if integer is positive, is of greater value
+			- if integer is 0, objects are of equal value
+	- used to define a natural order
+Comparator
+	- functional interface
+		- compare method
+	- implement in a different class
+		Comparator for an object. 
+	- used to define a custom order
+
+
+Generics
+	- Form a generic class upon compile time.
+
+
+
+

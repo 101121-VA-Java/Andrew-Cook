@@ -1,0 +1,54 @@
+10/26 10/27
+
+Layering and business logic in the application 
+
+users will need a username and password
+	- string username
+	- string password
+	- string name
+	- int id
+	- enum role
+		- Basic_Empoyee
+		- Manager
+		- Admin
+	- employee manager
+
+In controller  (the controller should take in input and display a result) 
+	- Employee Controller
+		- void register (username, name, password)
+			- give indication to the console if registration is successful.
+			- create employee with those values
+			- pass to employee service 
+		-  login(username, password) intake
+			- take to the main menu. 
+
+In Services
+	- EmployeeService
+	Employee addEmployee
+		- check to see if username is already in use. 
+			- if yes
+				- throw exception
+			- if not
+				- set role
+				- set manager to EnrollmentAdmin
+		- List<Employee> getAll()
+		-List<Employee> getByManager(man)
+			- use getAllEmps filter for a specific manager. 
+		- addEmployee(
+		- register
+		- login
+
+
+In Repository/DAO   (should store data and have persistence/storage) 
+in charge of filtering
+
+	EmployeeDao
+		-addEmployee(Employee e)
+			- assign an id 
+			- persist the record.
+		- List<Employee> getAllEmps()
+			- Return all employee
+		
+
+
+
