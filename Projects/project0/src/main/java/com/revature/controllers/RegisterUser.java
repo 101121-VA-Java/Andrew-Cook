@@ -13,26 +13,26 @@ private static EmployeeService us = new EmployeeService();
 		System.out.println();
 		System.out.println("Please enter your ID: (at least 4 char)");
 		int id = sc.nextInt();
-		if(id < 3) { 
+		if(id < 4) { 
 			System.out.println("Your ID should be at least 4 characters.");
 			return;
 		}
 		System.out.println("Please enter your username: at least 4 char");
 		String lastname = sc.nextLine();
-		if(lastname.trim().length() < 3) {
+		if(lastname.trim().length() < 4) {
 			System.out.println("Your username should be at least 4 characters.");
 			return;
 		}
 		
 		System.out.println("Please enter your password: at least 4 char");
 		String firstname = sc.nextLine();
-		if(firstname.trim().length() < 3) {
+		if(firstname.trim().length() < 4) {
 			System.out.println("Your password should be at least 4 characters.");
 			return;
 		}
 		System.out.println("Please enter your password: at least 4 char");
 		double salary = sc.nextDouble();
-		if(salary < 3) {
+		if(salary < 4) {
 			System.out.println("Your password should be at least 4 characters.");
 			return;
 		}

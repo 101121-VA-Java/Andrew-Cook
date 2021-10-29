@@ -6,6 +6,7 @@ public class Car {
 	String model;
 	String carCondition;
 	int numMiles;
+	int year;
 	String numColor;
 	double price;
 	boolean ownedState;
@@ -18,6 +19,7 @@ public class Car {
 		this.model = model;
 		this.carCondition = carCondition;
 		this.numMiles = numMiles;
+		this.year = year;
 		this.numColor = numColor;
 		this.price = price;
 		this.ownedState = ownedState;
