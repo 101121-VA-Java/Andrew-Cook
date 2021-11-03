@@ -1,10 +1,10 @@
 package com.revature.models;
-import java.util.Objects;
+
 
 public class Customer {
 
 		private String name;
-		private int id;
+		private int customerID;
 		private String username;
 		private String password;
 		
@@ -15,6 +15,17 @@ public class Customer {
 			this.username = username;
 			
 		}
-		
+		public void setUsername() {
+			this.username = username;
+		}
+		public int getCustomerID() {
+			return customerID;
+		}
+		public String setPassword() {
+			return password;
+		}
+		public String getPassword() {
+			return password;
+		}
 		
 }

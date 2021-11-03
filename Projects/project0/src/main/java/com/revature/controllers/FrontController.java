@@ -43,34 +43,6 @@ public class FrontController {
 	//			done = true;
 				break;
 
-			case "B":
-	//		EMPLOYEE:
-				System.out.println("Employee options:"
-						+ "1: Add an item."
-						+ "2: Remove and item."
-						+ "3: Accept an offer."
-						+ "4: Reject an offer."
-						+ "5: View payments.");
-
-				String employeeChoice = sc.nextLine();
-				switch(employeeChoice){
-					case "1": 
-						System.out.println("Add an item to the shop");
-					case "2":
-						System.out.print("Remove an item.");
-					case "3":
-						System.out.print("Accept a pending offer for an item");
-				
-					case "4":
-					System.out.print("Remove an item from the shop.");
-					case "5":
-						System.out.println("view all payments.");
-				}
-					
-					
-				
-				
-				
 				
 				break;
 			case "2":
