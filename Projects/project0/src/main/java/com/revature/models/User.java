@@ -22,6 +22,10 @@ public class User {
 		this.userType = user;
 	}
 
+	public User(int id2, String name2, String username2, String password2, Role system, int manager) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, name, password, payment, userType, username);

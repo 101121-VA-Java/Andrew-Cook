@@ -9,7 +9,7 @@ public class EmployeeController {
 		
 		public static void employeeDashboard() {
 		while(flag) {
-			System.out.println("+-------------------------------------------+");
+			System.out.println("+--------------------------------------------+");
 			System.out.println("  Welcome Employee! Please select an option.");
 			System.out.println("\n 1: Remove an item.");
 			System.out.println("\n 2: Add an item.");
@@ -17,6 +17,7 @@ public class EmployeeController {
 			System.out.println("\n 4: View payments.");
 			System.out.println("\n 5: Log out.");
 			System.out.println("\n+-------------------------------------------+");
+	
 		}
 		String input = sc.nextLine();
 		switch(input) {
@@ -51,6 +52,17 @@ public class EmployeeController {
 	
 	
 		}
+		}
+
+		public void RegisterUser(Scanner sc2) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void login(Scanner sc2) {
+			// TODO Auto-generated method stub
+			
+			
 		}
 	
 	
