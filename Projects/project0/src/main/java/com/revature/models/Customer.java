@@ -27,5 +27,17 @@ public class Customer {
 		public String getPassword() {
 			return password;
 		}
+		public Object getEmail() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public void setLoggedIn(boolean b) {
+			// TODO Auto-generated method stub
+			
+		}
+		public boolean isLoggedIn() {
+			// TODO Auto-generated method stub
+			return false;
+		}
 		
 }

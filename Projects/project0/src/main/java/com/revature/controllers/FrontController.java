@@ -3,7 +3,7 @@ package com.revature.controllers;
 import java.util.Scanner;
 
 public class FrontController {
-	private static Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
 	private static EmployeeController ec;
 
 	public static void run() {
@@ -52,15 +52,9 @@ public class FrontController {
 				
 				
 				}
-			case "2":
-				ec.login(sc);
-				
-				
-				
-				
-				
-				
-				
+			case "2"://Jump to the login menu
+				LoginController login = new LoginController();
+				login.login(sc); // creating an instance of login using the login method
 				
 				
 				
@@ -82,6 +76,6 @@ public class FrontController {
 			}
 			
 			sc.close();
-	}
+	    }
 	}
 	}
