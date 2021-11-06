@@ -12,7 +12,7 @@ public class FrontController {
 		while(run) {
 			System.out.println("+-----------------------------------------------------------------+");
 			System.out.println("|                 Welcome to Lemon's Used Cars!                   |");
-			System.out.println("|        For pre-owned vehicles, you've come to the right place!  |");
+			System.out.println("|      For pre-owned vehicles, you've come to the right place!    |");
 			System.out.println("|                    Login and take a look!                       |");
 			System.out.println("+-----------------------------------------------------------------+");			
 				
@@ -25,13 +25,48 @@ public class FrontController {
 			switch(choice) {
 			
 			case "1":
-				ec.RegisterUser(sc);
-				System.out.println();
-				run = false;
+				System.out.println("Pick your registration: ");
+				System.out.println("1: New Employee");
+				System.out.println("2: New Customer");
+				System.out.println("3: Return to the front menu");
+				
+				String eou = sc.nextLine();
+				switch(eou) {
+				
+				case "1":
+					System.out.println("Employee registration");
+					RegisterUser ec = new RegisterUser();
+					ec.registerEmployee(sc);
+				
 				break;
 			
+				case "2":
+					System.out.println("Customer register");
+					RegisterUser cc = new RegisterUser();
+					cc.registerCustomer(sc);
+				break;
+				
+				case "3":
+					System.out.println("Return to the front menu");
+					FrontController.run();
+				
+				
+				}
 			case "2":
 				ec.login(sc);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				break;
 				
 			case "3":
