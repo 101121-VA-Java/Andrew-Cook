@@ -6,12 +6,14 @@ public class LoginController {
     private Scanner sc;
 	public static void login(Scanner scan) {
 	Scanner sc = new Scanner(System.in);
-	//Give option of Customer or Employee
+												//Give option of Customer, employee, or back to the main menu.
+	System.out.println("+-----------------------------------------------------------------+");
 	System.out.println("Login Controller menu");
 	System.out.println("Select an option below");
 	System.out.println("1: Customer");
 	System.out.println("2: Employee");
 	System.out.println("3: Main menu");
+	System.out.println("+-----------------------------------------------------------------+");
 	
 	
 		String coe = sc.nextLine();

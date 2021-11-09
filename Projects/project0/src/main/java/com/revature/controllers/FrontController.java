@@ -57,10 +57,7 @@ public class FrontController {
 				login.login(sc); // creating an instance of login using the login method
 				
 				
-				
-				
-				
-				
+								
 				break;
 				
 			case "3":

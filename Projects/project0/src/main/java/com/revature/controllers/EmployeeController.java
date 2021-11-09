@@ -1,4 +1,5 @@
 package com.revature.controllers;
+import com.revature.services.CarServices;
 import com.revature.services.EmployeeService;
 import java.util.Scanner;
 
@@ -22,9 +23,7 @@ public class EmployeeController {
 		String input = sc.nextLine();
 		switch(input) {
 		case "1" :
-			System.out.println();
-			flag = false;
-			break;
+			private static void removeCar = new 
 			
 		case "2" :
 			// Remove an item from the shop
@@ -53,6 +52,30 @@ public class EmployeeController {
 	
 		}
 		}
+		private static void carOffers(Scanner sc) {
+			CarServices mems = new CarServices();
+			ArrayList<CarOffers> displayListMemberOffers = mems.carOffers();
+			System.out.println("Please choose the ID number for the offer you would like to update");
+			int offerId = sc.nextInt();
+			System.out.println("Would you like to accept or reject this offer?");
+			boolean decision = sc.nextBoolean();
+			if(decision) {
+				for (MemberOffers mo : displayListMemberOffers) {
+					if(mo.getOfferId() == offerId) {
+						mems.acceptRejectOffer(offerId, true, mo.getOfferId());
+					}
+				}
+			}
+		}
+		private static void viewAllPayments(Scanner sc) {
+			CarServices mems = new CarServices();
+			car.viewCarPayments();
+		
+		
+		
+		
+		
+		
 
 		public void RegisterUser(Scanner sc2) {
 			// TODO Auto-generated method stub

@@ -12,9 +12,11 @@ public class Car {
 	double price;
 	boolean ownedState;
 	private String color;
+	private String carexceptions;
+	private Object id;
 	
 	public Car(String carType, String model, String carCondition, int numMiles, String color, double price,
-			boolean ownedState, int year) {
+			boolean ownedState, int year, String carexception) {
 		
 		super();
 		this.carType = carType;
@@ -25,6 +27,7 @@ public class Car {
 		this.color = color;
 		this.price = price;
 		this.ownedState = ownedState;
+		this.carexceptions = carexceptions;
 	}
 	public String getcarType() {
 		return carType;
@@ -70,7 +73,7 @@ public class Car {
 	public int hashCode() {
 		Object id;
 		Object color;
-		return Objects.hash(color, id, ownedState, price, size, type);
+		return Objects.hash(color, id, ownedState, price, size, carCondition);
 	}
 
 	public boolean equals(Object obj, Object color) {
@@ -82,12 +85,12 @@ public class Car {
 			return false;
 		Car other = (Car) obj;
 		return Objects.equals(color, other.color) && id == other.id && ownedState == other.owned && price == other.price
-				&& Objects.equals(size, other.size) && Objects.equals(type, other.type);
+				&& Objects.equals(size, other.size) && Objects.equals(carCondition, other.carCondition);
 	}
 
 	@Override
 	public String toString() {
-		return "Car [type=" + type + ", price=" + price + ", color=" + color + ", + " owned=" + ownedState + "]";
+		return "Car [type=" + carCondition + ", price=" + price + ", color=" + color +  + " owned=" + ownedState + "]";
 	}
 
 	

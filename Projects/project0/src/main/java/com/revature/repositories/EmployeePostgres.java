@@ -12,8 +12,6 @@ import com.revature.services.ConnectionUtility;
 
 public class EmployeePostgres implements EmployeeDao{
 	
-		
-		
 
 		@Override
 		public List<Employee> getAll() {
