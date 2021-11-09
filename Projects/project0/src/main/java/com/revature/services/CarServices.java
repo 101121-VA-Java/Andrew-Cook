@@ -54,20 +54,29 @@ public class CarServices {
 			
 		public ArrayList<CarOffers> customerOffers(){
 			try {
-					displayListMemberOffers(cp.carOffers());
+					displayListCarOffers(cp.carOffers());
 				return cp.carOffers();
 			}catch(SQLException e) {
 					e.printStackTrace();
 			}catch (IOException e) {
 					e.printStackTrace();
-				}
-				
-				return null;
 			}
 			
+			return null;
+			}
+			
+		private void displayListCarOffers(Object carOffers) {
+			// TODO Auto-generated method stub
+			
+		}
+
 }
 		private void displayListCars(Object viewMyCars) {
 			// TODO Auto-generated method stub
 			
+		}
+		public ArrayList<CarOffers> carOffers() {
+			// TODO Auto-generated method stub
+			return null;
 		}
 }

@@ -11,7 +11,35 @@ import com.revature.repositories.CustomerDao;
 import com.revature.repositories.CustomerPostgres;
 
 public class CustomerService {
-	
+	private CustomerDao ud;
+	private CustomerPostgres up;
+
+	public UserServices() {
+		up = new UserPostgres();
+	}
+
+	public String newUser(User u) {
+		String userAdded = "Sorry, we were unable to create an account for you.";
+		try {
+			up.addUser(u);
+			return "true";
+		}
+
+		// return null;
+		catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return userAdded;
+	}
+
+	public String loginSystem(String username, String pword, String uname) throws SQLException, IOException {
+
+		User loggedIn = null;
+
+	//	try {
+			loggedIn = up.getUsername(username);
 	private static CustomerDao cd = new CustomerPostgres();
 	private Customer c;
 	
@@ -28,6 +56,11 @@ public class CustomerService {
 			return null;
 		}
 			
+		private Customer getCustomerByEmail(Object email) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 		public Customer login(String email, String password) throws LoginException{
 			Customer cust = this.getCustomerByEmail(email);
 			if(cust == null || !cust.getPassword().equals(password)) {

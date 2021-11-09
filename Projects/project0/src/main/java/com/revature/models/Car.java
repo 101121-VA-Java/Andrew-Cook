@@ -1,5 +1,6 @@
 package com.revature.models;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Car {
@@ -11,12 +12,12 @@ public class Car {
 	int year;
 	double price;
 	boolean ownedState;
-	private String color;
+	String color;
 	private String carexceptions;
-	private Object id;
+	Object id;
 	
 	public Car(String carType, String model, String carCondition, int numMiles, String color, double price,
-			boolean ownedState, int year, String carexception) {
+			boolean ownedState, int year, String carexceptions) {
 		
 		super();
 		this.carType = carType;
@@ -91,6 +92,18 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car [type=" + carCondition + ", price=" + price + ", color=" + color +  + " owned=" + ownedState + "]";
+	}
+	public static void acceptRejectOffer(int offerId, boolean b, int offerId2) {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void viewCarPayments() {
+		// TODO Auto-generated method stub
+		
+	}
+	public static ArrayList<Car> getAllCar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
