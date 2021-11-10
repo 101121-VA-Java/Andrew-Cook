@@ -2,7 +2,7 @@ package com.revature.repositories;
 import java.util.ArrayList;
 
 import com.revature.models.Car;
-import com.revature.utilities.ConnectionUtil;
+
 public class CarPostgres {
 
 	public void addCars(Car cars) {

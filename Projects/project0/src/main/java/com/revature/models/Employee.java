@@ -1,6 +1,7 @@
 package com.revature.models;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Employee {
 
@@ -10,9 +11,9 @@ public class Employee {
 	private String password;
 	private UserType userType;
 	private ArrayList<Payment> payment;
-	private boolean isManager;
+//	private boolean isManager;
 	private String email;
-			
+	private String role;		
 	public Employee() {
 		super();
 }
@@ -23,8 +24,17 @@ public class Employee {
 			this.name = name;
 //			this.email = email;
 			this.password = password;
-			this.isManager = isManager;
+//			this.isManager = isManager;
 		
+		}
+		
+		
+		public Employee(int id, String name, String username, String password) {
+			super();
+			this.id = id;
+			this.name = name;
+			this.username = username;
+			this.password = password;
 		}
 		public Employee(String name, String username, String password) {
 			super();
@@ -81,6 +91,17 @@ public class Employee {
 			this.email = email;
 			 
 		}
+
+		public String getRole() {
+			return role;
+		}
+		public void setRole(String role) {
+			this.role = role;
+		}
+		@Override
+		public int hashCode() {
+			return Objects.hash(email, id, name, password, payment, role, userType, username);
+		}
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
@@ -90,28 +111,14 @@ public class Employee {
 			if (getClass() != obj.getClass())
 				return false;
 			Employee other = (Employee) obj;
-			if (email == null) {
-				if (other.email != null)
-					return false;
-			} else if (!email.equals(other.email))
-				return false;
-			if (id != other.id)
-				return false;
-			if (name == null) {
-				if (other.name != null)
-					return false;
-			} else if (!name.equals(other.name))
-				return false;
-			if (name == null) {
-				if (other.name != null)
-					return false;
-			} else if (!name.equals(other.name))
-				return false;
-			if (password == null) {
-				if (other.password != null)
-					return false;
-			} else if (!password.equals(other.password))
-				return false;
-			return true;
+			return Objects.equals(email, other.email) && id == other.id && Objects.equals(name, other.name)
+					&& Objects.equals(password, other.password) && Objects.equals(payment, other.payment)
+					&& Objects.equals(role, other.role) && userType == other.userType
+					&& Objects.equals(username, other.username);
+		}
+		@Override
+		public String toString() {
+			return "Employee [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password
+					+ ", userType=" + userType + ", payment=" + payment + ", email=" + email + ", role=" + role + "]";
 		}	
 }

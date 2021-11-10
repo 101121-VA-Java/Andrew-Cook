@@ -2,6 +2,8 @@ package com.revature.services;
 
 import com.revature.models.Employee;
 import com.revature.models.User;
+import com.revature.repositories.EmployeeDao;
+import com.revature.repositories.EmployeePostgres;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10,10 +12,15 @@ import com.revature.Role;
 
 public class EmployeeService {
 
-	public com.revature.Employee addEmployee(com.revature.Employee newEmp) {
-		// TODO Auto-generated method stub
-		return null;
+	
+private static EmployeeDao ed = new EmployeePostgres();
+
+	public static Employee addEmployee(Employee newEmp) {
+		
+		return ed.add(newEmp);
 	}
+	
+
 	public UserServices() {
 		up = new UserPostgres();
 	}
@@ -53,4 +60,5 @@ public class EmployeeService {
 				return "Cannot locate username";
 			}
 
+}
 }

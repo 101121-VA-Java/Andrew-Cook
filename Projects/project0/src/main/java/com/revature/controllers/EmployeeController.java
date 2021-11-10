@@ -44,33 +44,19 @@ public class EmployeeController {
 				default:
 				System.out.println("Invalid, please select 1 - 5.");
 		}
-		
-	/*
-	 * 	String carType;
-	String model;
-	String carCondition;
-	int numMiles;
-	int year;
-	double price;
-	boolean ownedState;
-	private String color;
-	private String carexceptions;
-	private Object id;
-	 */
-	
 		}
-		private static void removeCar(Scanner sc) {
-			CarServices mems = new CarServices();
+		public static void removeCar(Scanner sc) {
+			CarServices car = new CarServices();
 				ArrayList<Car> displayListCars = Car.getAllCar();
 				if (displayListCars != null) {
 					Car[] displayListCars;
-					for(Car mem : displayListCars) {
+					for(Car car : displayListCars) {
 						System.out.println(car);
 					}
 				System.out.println("Which ID to remove");
 				int memId = sc.nextInt();
-				CarServices membs = new CarServices();
-				membs.removeCar(carId);
+				CarServices carbs = new CarServices();
+				carbs.removeCar(carId);
 				}
 				else{
 					
@@ -78,31 +64,40 @@ public class EmployeeController {
 				}
 				
 			}
-			
+		public void displayListCars(ArrayList<Car> list) {
+			for (Car car : list) {
+				System.out.println(car);
 		}
-		private static void addCar(Scanner sc2) {
-			System.out.println("Price");
-			double carprice = sc.nextInt();
-			System.out.println("Year");
+		
+		public static void addCar(Scanner sc2) {
+			System.out.println("Car ID number");
+			double carid = sc.nextInt();
+			System.out.println("Car year");
 			int caryear = sc.nextInt();
-			System.out.println("Mileage");
-			int carmiles = sc.nextInt();
-			System.out.println("Model");
+			System.out.println("Car make");
+			int carmake = sc.nextInt();
+			System.out.println("Car model");
 			String carmodel = sc.nextLine();
-			System.out.println("Color");
-			String carcolor = sc.nextLine();
+			System.out.println("Car price");
+			String carprice = sc.nextLine();
 			
-			Car newcar = new Car(carprice, caryear, carmiles, carmodel, carcolor);
+			Car newcar = new Car(carid, caryear, carmake, carmodel, carprice);
 			CarServices carser = new CarServices();
 			
 			if(carser.addCar(newcar) == false) {
 				System.out.println("Invalid");
 			}else {
 				System.out.println("Car added");
+				
+		Car newCar = new Car(carId, carYear, carMake, carModel, carPrice);
+		CarServices carser = new CarServices();
+		if(carser.addCar(newcar) == false) {
+			System.out.println("Add unsuccessful");
+		}else {
+			System.out.println("The car has been added to the list.");
 			
-		}
-		}
-		private static void carOffers(Scanner sc) {
+				}
+		public static void carOffers(Scanner sc) {
 			CarServices car = new CarServices();
 			ArrayList<CarOffers> displayListCarOffers = car.carOffers();
 			System.out.println("Input offer to update");
@@ -117,16 +112,11 @@ public class EmployeeController {
 				}
 			}
 		}
-		private static void viewAllPayments(Scanner sc) {
+		public static void viewAllPayments(Scanner sc) {
 			CarServices car = new CarServices();
 			Car.viewCarPayments();
 		}
 		
-		
-		
-		
-		
-
 		public void RegisterUser(Scanner sc2) {
 			// TODO Auto-generated method stub
 			
@@ -138,14 +128,6 @@ public class EmployeeController {
 			
 		}
 	
-		public void displayListMemberships(ArrayList<Car> list) {
-			for (Car car : list) {
-				System.out.println(car);
-		}
-		Car newcar = new Car(carprice, caryear, carmiles, carmodel, carcolor);
-		CarServices memser = new CarServices();
-		if(carser.addCar(newcar) == false) {
-			System.out.println("Add unsuccessful");
-		}else {
-			System.out.println("Membership added successfully!");
+
+
 }

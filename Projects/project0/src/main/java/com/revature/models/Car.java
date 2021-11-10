@@ -4,80 +4,117 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Car {
-	
-	String carType;
-	String model;
-	String carCondition;
-	int numMiles;
-	int year;
-	double price;
+
+
+	int carId;
+	int carYear;
+	String carMake;
+	String carModel;
+	double carPrice;
 	boolean ownedState;
 	String color;
 	private String carexceptions;
 	Object id;
 	
-	public Car(String carType, String model, String carCondition, int numMiles, String color, double price,
-			boolean ownedState, int year, String carexceptions) {
-		
+	public Car(int carYear, String carMake, String carModel, double carPrice) {
 		super();
-		this.carType = carType;
-		this.model = model;
-		this.carCondition = carCondition;
-		this.numMiles = numMiles;
-		this.year = year;
-		this.color = color;
-		this.price = price;
+		this.carYear = carYear;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carPrice = carPrice;
+	}
+
+	public Car(int carId, int carYear, String carMake, String carModel, double carPrice, boolean ownedState,
+			String carexceptions) {
+		super();
+		this.carId = carId;
+		this.carYear = carYear;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carPrice = carPrice;
 		this.ownedState = ownedState;
 		this.carexceptions = carexceptions;
 	}
-	public String getcarType() {
-		return carType;
+
+	public int getCarId() {
+		return carId;
 	}
 
-	public void setcarType(String carType) {
-		this.carType = carType;
+	public void setCarId(int carId) {
+		this.carId = carId;
 	}
 
-	public String getmodel() {
-		return model;
+	public int getCarYear() {
+		return carYear;
 	}
 
-	public void setmodel(String model) {
-		this.model = model;
+	public void setCarYear(int carYear) {
+		this.carYear = carYear;
 	}
 
-	public double getPrice() {
-		return price;
+	public String getCarMake() {
+		return carMake;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	public void setCarMake(String carMake) {
+		this.carMake = carMake;
 	}
 
-	public String getcolor() {
-		return getcolor();
+	public String getCarModel() {
+		return carModel;
+	}
+
+	public void setCarModel(String carModel) {
+		this.carModel = carModel;
+	}
+
+	public double getCarPrice() {
+		return carPrice;
+	}
+
+	public void setCarPrice(double carPrice) {
+		this.carPrice = carPrice;
+	}
+
+	public boolean isOwnedState() {
+		return ownedState;
+	}
+
+	public void setOwnedState(boolean ownedState) {
+		this.ownedState = ownedState;
+	}
+
+	public String getColor() {
+		return color;
 	}
 
 	public void setColor(String color) {
 		this.color = color;
 	}
 
-	public boolean isOwned() {
-		return ownedState;
+	public String getCarexceptions() {
+		return carexceptions;
 	}
 
-	public void setOwned(boolean owned) {
-		this.ownedState = owned;
+	public void setCarexceptions(String carexceptions) {
+		this.carexceptions = carexceptions;
+	}
+
+	public Object getId() {
+		return id;
+	}
+
+	public void setId(Object id) {
+		this.id = id;
 	}
 
 	@Override
 	public int hashCode() {
-		Object id;
-		Object color;
-		return Objects.hash(color, id, ownedState, price, size, carCondition);
+		return Objects.hash(carId, carMake, carModel, carPrice, carYear, carexceptions, color, id, ownedState);
 	}
 
-	public boolean equals(Object obj, Object color) {
+	@Override
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -85,28 +122,18 @@ public class Car {
 		if (getClass() != obj.getClass())
 			return false;
 		Car other = (Car) obj;
-		return Objects.equals(color, other.color) && id == other.id && ownedState == other.owned && price == other.price
-				&& Objects.equals(size, other.size) && Objects.equals(carCondition, other.carCondition);
+		return carId == other.carId && Objects.equals(carMake, other.carMake)
+				&& Objects.equals(carModel, other.carModel)
+				&& Double.doubleToLongBits(carPrice) == Double.doubleToLongBits(other.carPrice)
+				&& carYear == other.carYear && Objects.equals(carexceptions, other.carexceptions)
+				&& Objects.equals(color, other.color) && Objects.equals(id, other.id) && ownedState == other.ownedState;
 	}
 
 	@Override
 	public String toString() {
-		return "Car [type=" + carCondition + ", price=" + price + ", color=" + color +  + " owned=" + ownedState + "]";
+		return "Car [carId=" + carId + ", carYear=" + carYear + ", carMake=" + carMake + ", carModel=" + carModel
+				+ ", carPrice=" + carPrice + ", ownedState=" + ownedState + ", color=" + color + ", carexceptions="
+				+ carexceptions + ", id=" + id + "]";
 	}
-	public static void acceptRejectOffer(int offerId, boolean b, int offerId2) {
-		// TODO Auto-generated method stub
-		
-	}
-	public static void viewCarPayments() {
-		// TODO Auto-generated method stub
-		
-	}
-	public static ArrayList<Car> getAllCar() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-}
 	
 }

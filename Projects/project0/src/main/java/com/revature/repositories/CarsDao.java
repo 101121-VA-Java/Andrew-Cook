@@ -2,8 +2,9 @@ package com.revature.repositories;
 import com.revature.models.Car;
 import com.revature.models.CarCondition;
 
+import java.util.ArrayList;
 import java.util.List;
-public interface CarsDao {
+public interface CarsDao extends GenericDao<Car> {
 
 	Car[] getInventory();      // Car Inventory data access object.
 		Car getCarByModel(String Model);
@@ -16,3 +17,7 @@ public interface CarsDao {
 		List<Car> getAllCarsByYear();
 }
 
+public ArrayList<Car> getAllCar() {
+	// TODO Auto-generated method stub
+	return null;
+}
