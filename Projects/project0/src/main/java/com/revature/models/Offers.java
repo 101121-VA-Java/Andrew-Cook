@@ -59,13 +59,13 @@ public class Offers {
 		 * @return the userpaid
 		 */
 		public boolean isUserpaid() {
-			return userpaid;
+			return userPaid;
 		}
 		/**
 		 * @param userpaid the userpaid to set
 		 */
 		public void setUserpaid(boolean userpaid) {
-			this.userpaid = userpaid;
+			this.userPaid = userpaid;
 		}
 		/**
 		 * @return the acceptOffer

@@ -97,32 +97,9 @@ private void itemsMenu(Scanner sc) {
 	}
 	
 	
-	private void viewItemImage(Scanner sc) {
-		
-		Items li = new Items();
-		ArrayList<Item> listitems = li.getItems();
-		if (listitems.size() != 0) {
-			for (Item i : listitems) {
-				System.out.println(i);
-			}
-			
-			System.out.println("Please select itemID you want to view:");
-			int itemNum = iv.validateInt(sc);
-			
-			li.viewItemImage(itemNum);
-			
-		}
-		else {
-			System.out.println("No items have been added to the shop yet.");
-		}
-	
 }
 	
 	
-		
-	
-	
-}
 
 
 
