@@ -1,0 +1,132 @@
+In the full stack, we have worked with the backend.
+Now we will focus on and work with the front end. 
+Languages
+	HTML 
+	CSS
+	JavaScript
+	HTTP
+
+
+
+
+	- Inspect button
+		- html for webpage on the left side.
+		- Styles on the right. CSS
+		- 
+			
+
+Resources
+	- w3schools (great for HTML CSS JavaScript)
+		- great for styling
+	- Mozilla developer Javascript resources. 
+		- tutorials
+
+
+
+
+HTML 
+	- Hypertext Mark-up Language
+		- not a programming language
+	- Used to define the structure of a webpage using HTML tags.
+		- we're going to be using tags following a nested structure
+		- structure of an HTML document.
+			- Doctype Declaration (optional as of html5)
+				- tag that indicates the file as an HTML doc.
+			- html
+				- head
+					- metadata (information about the webpage)
+				- body
+					- information display on the webpage
+
+	- Elements in HTML have attributes.
+		- these are used to provide information. 
+			- more information regarding the tab. 
+
+			- Global attributes
+				- present in all html tags
+				- class, id, style
+			- local attributes
+				- used in specific tags
+					- src, href
+		- ie:
+			<div id=
+	- Semantic elements
+		- concept introduced in html5
+		- provides more meaning for tags. 
+			- helps with accessiblitiy
+		- names such as 
+			- nav, main, section, footer, header. instead of divs everywhere. 
+	- Headers
+		- h1 -> h6
+		- biggest to smallest
+	- Forms
+		- tags that can be used to take user input and submit information. 
+			- can submit information without JS, just using attribute.
+				- method: specify the HTTP method
+				- action: specify the url
+
+	- Self-closing tags
+		- elements that do not require a closing tag. 
+
+	-List
+		Ordered and unordered list
+			- ol
+				- ordered list
+			- ul
+				- unordered list
+
+CSS
+	- Cascading Style Sheets
+		- style is loaded from top to bottom.
+	- adds looks/styles to HTML
+		- HTML is the structure of the webpage, CSS is the styling
+	- add CSS into the web page.
+		- inline
+			- in the HTML tag via attribute
+				- <div id="div1" style="color: cornflowerblue:"></div>
+		- internally
+			- in the HTML document, in the head tag
+				- <style>
+					selector {
+					property: value;
+					}
+				- </style>
+		- externally
+			- from external stylsheets
+				- best practice to reuse stylesheet. 
+			- 
+		- Selector
+			- target specific elements to be styled
+				- tag
+				- class
+				- id
+				- target elements more specifically
+					- ie: nested elements
+					- w3schools/css_selectors
+
+		- styles apply based on specificty, most specific elements will overrule
+			- most to least: id > class > 
+
+	CSS Box Model  (common interview question)
+			- content inside the padding inside the border inside the margin
+		- Margin | Border | Padding | Content
+
+
+
+VsCode add-on
+	Live Server
+		- allows for automatic registration. 
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- this is a comment -->
+		<!-- metadata goes here-->
+	<head>
+	<body>
+		<!-- information displayed here -->
+	<body>
+<html>
+
+
