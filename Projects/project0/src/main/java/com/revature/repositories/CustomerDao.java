@@ -8,7 +8,7 @@ import com.revature.models.User;
 import java.io.IOException;
 
 public class CustomerDao {
-	void addUser(User u) throws SQLException, IOException;
+	void addCustomer(Customer u) throws SQLException, IOException;
 	
 	User getUsername(String username) throws SQLException, IOException;
 	

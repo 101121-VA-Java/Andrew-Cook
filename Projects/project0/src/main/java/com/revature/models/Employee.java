@@ -68,13 +68,13 @@ public class Employee {
 		public void setPayment(ArrayList<Payment> payment) {
 			this.payment = payment;
 		}
-		public boolean isManager() {
+/*		public boolean isManager() {
 			return isManager;
 		}
 		public void setManager(boolean isManager) {
 			this.isManager = isManager;
 		}
-		public String getEmail() {
+*/		public String getEmail() {
 			return email;
 		}
 		public void setEmail(String email) {
