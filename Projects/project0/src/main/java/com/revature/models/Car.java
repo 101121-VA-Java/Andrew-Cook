@@ -12,7 +12,6 @@ public class Car {
 	String carModel;
 	double carPrice;
 	boolean ownedState;
-	String color;
 	private String carexceptions;
 	Object id;
 	
@@ -82,14 +81,6 @@ public class Car {
 
 	public void setOwnedState(boolean ownedState) {
 		this.ownedState = ownedState;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public String getCarexceptions() {

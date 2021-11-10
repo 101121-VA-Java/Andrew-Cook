@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class User {
 
+	public static Object currentUser;
 	private int id;
 	private String name;
 	private String username;

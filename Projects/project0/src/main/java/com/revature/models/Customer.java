@@ -51,7 +51,7 @@ public class Customer {
 		Connection con = null;
 		public User getUsername(String username) throws SQLException, IOException{
 			User u = null;
-					con = ConnectionUtility.getConnectionFromFile();
+					con = ConnectionUtility.getConnectionFromEnv();
 					String sql = "select * from users where username = '" + username + "';";
 					java.sql.Statement state = con.createStatement();
 					ResultSet rs = state.executeQuery(sql);
@@ -77,13 +77,13 @@ public class Customer {
 		
 		public void addUser(User u) throws SQLException, IOException{
 	
-				con = ConnectionUtility.getConnectionFromFile();
-				String sql = "insert into users (username, pword, uname, urole) values (?, ?, ?, ?)";
+				con = ConnectionUtility.getConnectionFromEnv();
+				String sql = "insert into users (username, password, username, urole) values (?, ?, ?, ?)";
 				PreparedStatement  ps = con.prepareStatement(sql);
 				String Role = u.getUsername();
 				ps.setString(1, u.getUsername());
-				ps.setString(2, u.getPword());
-				ps.setString(3,u.getUname());
+				ps.setString(2, u.getPassword());
+				ps.setString(3,u.getUsername());
 				ps.setString(4, Role);			
 				
 				ps.executeUpdate();

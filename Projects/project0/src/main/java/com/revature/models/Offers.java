@@ -8,18 +8,22 @@ public class Offers {
 		private boolean userPaid;
 		private boolean acceptOffer;
 		private boolean rejectOffer;
+		private double offer;
 		/**
 		 * @return the customerId
 		 */
 		public int getCustomerId() {
 			return CustomerId;
 		}
-		public Offers(int customerId, int offerId, int CarId, boolean userPaid, boolean acceptOffer, boolean, rejectOffer) {
+		public Offers(int customerId, int offerId, int CarId, boolean userPaid, boolean acceptOffer, boolean rejectOffer, double offer) {
 			super();
 			CustomerId = customerId;
+			this.offerId = offerId;
 			this.carId = carId;
-			this.accepted = accepted;
-			this.payedFor = payedFor;
+			this.acceptOffer = acceptOffer;
+			this.userPaid = userPaid;
+			this.offer = offer;
+			
 		}
 		/**
 		 * @param customerId the customerId to set
@@ -86,5 +90,17 @@ public class Offers {
 		 */
 		public void setRejectOffer(boolean rejectOffer) {
 			this.rejectOffer = rejectOffer;
+		}
+		/**
+		 * @return the offer
+		 */
+		public double getOffer() {
+			return offer;
+		}
+		/**
+		 * @param offer the offer to set
+		 */
+		public void setOffer(double offer) {
+			this.offer = offer;
 		}
 }
