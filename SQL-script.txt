@@ -1,0 +1,83 @@
+
+drop table if exists employees
+create table if not exists employees(
+	e_id serial primary key,
+	e_name varchar(50) not null,
+	e_username varchar(50) unique,
+	e_password varchar(50) not null,
+	e_role varchar(50),
+	man_e_id integer references employees(e_id)
+);
+--drop table users 
+create table employees (
+	id INT,
+	first_name VARCHAR(5),
+	last_name VARCHAR(5),
+	username VARCHAR(5),
+	password VARCHAR(5)
+);
+insert into employees (id, first_name, last_name, username, password) values (59, 'Rakel', 'Chadwyck', 'rchadwyck0', 'nIcbEedA1F');
+insert into employees (id, first_name, last_name, username, password) values (66, 'Kylie', 'Blankau', 'kblankau1', 'shqzJcfWPNad');
+insert into employees (id, first_name, last_name, username, password) values (63, 'Joby', 'McNeigh', 'jmcneigh2', '1kXcn61');
+insert into employees (id, first_name, last_name, username, password) values (92, 'Rosalind', 'Joret', 'rjoret3', 'lbDzEsBVXe');
+insert into employees (id, first_name, last_name, username, password) values (77, 'Rose', 'Rendle', 'rrendle4', '6T7Wt7Og');
+insert into employees (id, first_name, last_name, username, password) values (62, 'Danny', 'Sheryn', 'dsheryn5', 'nZnHRXhRd1QJ');
+insert into employees (id, first_name, last_name, username, password) values (68, 'Tersina', 'Mowbury', 'tmowbury6', 'cI1fyY');
+insert into employees (id, first_name, last_name, username, password) values (43, 'Sophi', 'Shoreman', 'sshoreman7', 'UZ4yVOK');
+insert into employees (id, first_name, last_name, username, password) values (2, 'Lezley', 'Braun', 'lbraun8', '8Np6MBRc8i36');
+insert into employees (id, first_name, last_name, username, password) values (76, 'Celestine', 'Gossington', 'cgossington9', 'nL8Too');
+insert into employees (id, first_name, last_name, username, password) values (23, 'Nick', 'Work', 'nworka', '8xl1Zj');
+insert into employees (id, first_name, last_name, username, password) values (10, 'Christy', 'Meriton', 'cmeritonb', 'VeIPObtC');
+insert into employees (id, first_name, last_name, username, password) values (54, 'Rhonda', 'Mein', 'rmeinc', 'JSYxLIf4xJT');
+insert into employees (id, first_name, last_name, username, password) values (2, 'Phyllis', 'Betchley', 'pbetchleyd', 'aEk1JhhXc0Rj');
+insert into employees (id, first_name, last_name, username, password) values (4, 'Dylan', 'Martineau', 'dmartineaue', 'CQW2oK');
+insert into employees (id, first_name, last_name, username, password) values (80, 'Rosella', 'Kennett', 'rkennettf', 'o0eJVk');
+insert into employees (id, first_name, last_name, username, password) values (86, 'Bendicty', 'Elliston', 'bellistong', 'WXBBQEM');
+insert into employees (id, first_name, last_name, username, password) values (26, 'Zea', 'Stoffel', 'zstoffelh', 'TzbDIm');
+insert into employees (id, first_name, last_name, username, password) values (51, 'Gran', 'Chater', 'gchateri', 'cjvpc4oXr');
+insert into employees (id, first_name, last_name, username, password) values (60, 'Delmor', 'Kenworth', 'dkenworthj', 'nUodgVqQVR');
+
+
+drop table Cars
+create table Car (
+	id INT,
+	year VARCHAR(50),
+	make VARCHAR(50),
+	model VARCHAR(50),
+	price VARCHAR(50)
+);
+insert into Car (id, year, make, model, price) values (5026, 2004, 'Suzuki', 'Swift', '$75620.25');
+insert into Car (id, year, make, model, price) values (9988, 2005, 'Volkswagen', 'Golf', '$6913.12');
+insert into Car (id, year, make, model, price) values (8921, 1994, 'Nissan', '300ZX', '$83945.78');
+insert into Car (id, year, make, model, price) values (9100, 1990, 'Mazda', '626', '$80436.26');
+insert into Car (id, year, make, model, price) values (6182, 1999, 'Pontiac', 'Bonneville', '$39228.51');
+
+
+--drop table if exists Customer
+create table Customer (
+	id INT,
+	first_name VARCHAR(5),
+	last_name VARCHAR(5),
+	email VARCHAR(5),
+	password VARCHAR(5),
+--	loggedIn VARCHAR(5),
+	balance VARCHAR(5),
+	remainingPayments INT
+);
+insert into Customer (id, first_name, last_name, email, password, loggedIn, balance, remainingPayments) values (2322, 'Riordan', 'Vaan', 'rvaan0@adobe.com', 'JhO3aMsb', false, '$157404.02', 22128);
+insert into Customer (id, first_name, last_name, email, password, loggedIn, balance, remainingPayments) values (2942, 'Rubi', 'Cadalleder', 'rcadalleder1@google.ru', 'NKQcnnf9', true, '$89573.91', 31424);
+insert into Customer (id, first_name, last_name, email, password, loggedIn, balance, remainingPayments) values (957, 'Arron', 'Lydiard', 'alydiard2@foxnews.com', 'Z9A1Ss1Xp', false, '$259564.00', 38824);
+insert into Customer (id, first_name, last_name, email, password, loggedIn, balance, remainingPayments) values (9434, 'Bessie', 'Minto', 'bminto3@hc360.com', 'nYOsKQa0ae', false, '$352465.72', 19800);
+
+
+
+
+
+
+
+
+
+
+
+
+
